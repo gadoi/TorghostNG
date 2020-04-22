@@ -402,4 +402,3 @@ if __name__ == "__main__":
 
 
 print(language.video_tutorials)
-exit()
