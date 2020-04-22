@@ -3,8 +3,6 @@
 from torngconf.theme import *
 from torghostng import geteuid, system, path, name, getoutput, sleep, argv, check_lang, choose_lang, try_again
 
-SLEEP = 1.25
-
 
 def banner():
     print(the_banner)
@@ -20,15 +18,66 @@ def check_windows_check_root():
         print(language.root_please)
         exit()
         
-def check_torghostng():
+def check_lang():
     try:
-        if path.isfile('/usr/bin/torghostng') == True:
-            print()
-            
+        if path.isfile('torngconf/langconf.txt') == True:
+            with open('torngconf/langconf.txt') as file_lang:
+                lang = eval(file_lang.readline())
+
+                file_lang.close()
+
+                print(lang.applying_language, end='', flush=True)
+                print(lang.done)
+
+                return lang
+        else:
+            lang = choose_lang()
+            return lang
+        
     except KeyboardInterrupt:
         print()
         exit()
+    except (NameError, SyntaxError):
+        lang = choose_lang()
+        return lang
+    except FileNotFoundError:
+        print("TorghostNG is lacking its needed files. Reinstall TorghostNG pls")
+        exit()
 
+
+def choose_lang(language=English):
+    try:
+        with open('torngconf/langconf.txt', mode="w") as file_lang:
+            file_lang.truncate(0)
+            
+            print(language.language_list)
+            choice = int(input(language.choose_your_lang))
+            
+            if choice == 1:
+                print(English.applying_language, end='', flush=True)
+                file_lang.write("English")
+                
+                print(English.done)
+                print(English.current_language + "English")
+                return English
+            
+            if choice == 2:
+                print(Vietnamese.applying_language, end='', flush=True)
+                file_lang.write("Vietnamese")
+                
+                print(Vietnamese.done)
+                print(Vietnamese.current_language + "Vietnamese")
+                return Vietnamese
+
+            else:
+                print(language.invalid_choice)
+                choose_lang()
+
+            file_lang.close()
+
+    except KeyboardInterrupt:
+        print()
+        exit()
 
 def uninstall():
     try:
@@ -38,13 +87,14 @@ def uninstall():
             print(language.uninstalling)
             system('sudo rm -rf /usr/bin/torngconf')
             system('sudo rm /usr/bin/torghostng')
-            sleep(SLEEP)
             print(language.uninstalled)
             exit()
             
         else:
             print(language.torghostng_tip.format('sudo torghostng') + color.END)
             exit()
+            
+        print(language.video_tutorials)
             
     except KeyboardInterrupt:
         print()
@@ -62,40 +112,31 @@ if path.isfile('/usr/bin/torghostng') == True:
 
 
 if path.isfile('/usr/bin/pacman') == True:
-    UPDATE_REPOSITORY = "sudo pacman -Sy"
     INSTALL_PACKAGES = "sudo pacman -S "
         
 elif path.isfile('/usr/bin/apt') == True:
-    UPDATE_REPOSITORY = "sudo apt update"
     INSTALL_PACKAGES = "sudo apt install "
     
 elif path.isfile('/usr/bin/eopkg') == True:
-    UPDATE_REPOSITORY = "sudo eopkg update-repo"
     INSTALL_PACKAGES = "sudo eopkg install "
         
 elif path.isfile('/usr/bin/dnf') == True:
-    UPDATE_REPOSITORY = "sudo dnf check-update"
     INSTALL_PACKAGES = "sudo dnf install "
         
 elif path.isfile('/usr/bin/yum') == True:
-    UPDATE_REPOSITORY = "sudo yum check-update"
     INSTALL_PACKAGES = "sudo yum install "
         
 elif path.isfile('/usr/bin/zypper') == True:
-    UPDATE_REPOSITORY = "sudo zypper update"
     INSTALL_PACKAGES = "sudo zypper install "
         
 elif path.isfile('/usr/bin/apk') == True:
-    UPDATE_REPOSITORY = "sudo apt update"
     INSTALL_PACKAGES = "sudo apk add --upgrade "
         
 elif path.isfile('/usr/bin/opkg') == True:
-    UPDATE_REPOSITORY = "sudo opkg update"
     INSTALL_PACKAGES = "sudo opkg install "
         
 elif path.isfile('/usr/bin/xbps-install') == True:
-    UPDATE_REPOSITORY = "sudo xbps-install -S "
-    INSTALL_PACKAGES = UPDATE_REPOSITORY
+    INSTALL_PACKAGES = "sudo xbps-install -S "
         
 elif path.isfile('/usr/bin/upgradepkg') == True:
     UPDATE_REPOSITORY = "wget https://slack.conraid.net/repository/slackware64-current/{}"
@@ -138,14 +179,14 @@ def install_package(package):
                     package == 'python3-pip'
 
                 system(INSTALL_PACKAGES + package)
-                
-            sleep(SLEEP)
+
             print(icon.success + language.done)
                 
             print(language.installed.format(package))
             
             if path.isfile('/usr/bin/upgradepkg') == True:
                 print(language.torghostng_tip.format('sudo python3 torghostng.py'))
+                print(language.video_tutorials)
                 exit()
             
     except KeyboardInterrupt:
@@ -162,7 +203,7 @@ def pyinstaller():
             print(language.installing.format('PyInstaller'))
             system('sudo pip2 uninstall pyinstaller')
             system('sudo pip3 install pyinstaller')
-            sleep(SLEEP)
+            
             print(icon.success + language.done)
             print(language.installed.format('PyInstaller'))
             
@@ -171,9 +212,10 @@ def pyinstaller():
         system('sudo cp -r dist/torghostng /usr/bin')
         system('sudo cp -r torngconf /usr/bin')
         system('chmod +x /usr/bin/torghostng')
-        sleep(SLEEP)
+        
         print(icon.success + language.done)
         print(language.torghostng_tip.format('sudo torghostng') + color.END)
+        print(language.video_tutorials)
         
     except KeyboardInterrupt:
         print()
