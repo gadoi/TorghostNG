@@ -399,6 +399,3 @@ if __name__ == "__main__":
         start_connecting(the_id)
         print(language.video_tutorials)
         exit()
-
-
-print(language.video_tutorials)
