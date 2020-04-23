@@ -153,9 +153,6 @@ elif path.isfile('/usr/bin/swupd') == True:
 
 def install_package(package):
     try:
-        if package == 'pip3':
-            package == 'python3-pip'
-
         if path.isfile('/usr/bin/'+package) == True:
             print(language.already_installed.format(package))
             
@@ -173,11 +170,14 @@ def install_package(package):
                     system(UPDATE_REPOSITORY.format('macchanger/macchanger-1.7.0-x86_64-5cf.txz'))
                     system(INSTALL_PACKAGES + 'macchanger-1.7.0-x86_64-5cf.txz')
                     
-                elif package == 'python3-pip':
+                elif package == 'pip3':
                     system('wget https://packages.slackonly.com/pub/packages/14.1-x86_64/python/python3/python3-3.5.1-x86_64-1_slack.txz')
                     system(INSTALL_PACKAGES + 'python3-3.5.1-x86_64-1_slack.txz')
                 
             else:
+                if package == 'pip3':
+                    package = 'python3-pip'
+
                 system(INSTALL_PACKAGES + package)
 
             print(icon.success + language.done)
