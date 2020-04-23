@@ -122,7 +122,7 @@ def check_windows_check_root():
 def check_update():
     try:
         print(language.checking_update, end='', flush=True)
-        version = getoutput('curl -s --max-time 10 https://raw.githubusercontent.com/gitkern3l/TorghostNG/master/torngconf/Version')
+        version = getoutput('curl -s --max-time 60 https://raw.githubusercontent.com/gitkern3l/TorghostNG/master/torngconf/Version')
         sleep(SLEEP_TIME)
         print(language.done)
 
@@ -147,7 +147,7 @@ def check_update():
 def check_tor(status):
     try:
         print(language.checking_tor, end='', flush=True)
-        tor_status = getoutput("curl -s --max-time 20 https://check.torproject.org | grep Congratulations")
+        tor_status = getoutput("curl -s --max-time 60 https://check.torproject.org | grep Congratulations")
         sleep(SLEEP_TIME)
         print(language.done)
         
@@ -173,7 +173,7 @@ def check_tor(status):
 def check_ip():
     try:
         print(language.checking_ip, end='', flush=True)
-        ip_address = getoutput('curl -s --max-time 10 https://fathomless-tor-66488.herokuapp.com/ip')
+        ip_address = getoutput('curl -s --max-time 60 https://fathomless-tor-66488.herokuapp.com/ip')
         sleep(SLEEP_TIME)
         print(language.done)
         print(language.your_ip + color.BOLD + ip_address + color.END)
