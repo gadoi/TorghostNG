@@ -45,7 +45,7 @@ Nhưng với Slackware, bạn phải gõ `sudo python3 torghostng.py` để ch�
 Bạn cũng có thể dùng nhiều lựa chọn cùng lúc như:
 * `torghostng -s -m INTERFACE`: đổi địa chỉ MAC trước khi kết nối
 * `torghostng -c -m INTERFACE`: kiểm tra địa chỉ IP và thay địa chỉ MAC
-* `torghostng -s -x`: kết nối đến TOR rồi ngưng luôn :v
+* `torghostng -s -x`: kết nối đến Tor rồi ngưng luôn :v
 * ...
 
 Nếu bạn còn có thắc mắc nào khác thì xem [video hướng dẫn sử dụng](https://bit.ly/34TNglL) nè 🙂
@@ -56,15 +56,18 @@ Hy vọng các bạn sẽ yêu video hướng dẫn đó 😃
 Mạng TOR không thể giúp bạn hoàn toàn ẩn danh, chỉ giúp bạn gần như hoàn toàn thôi:
 * [Tor’s Biggest Threat – Correlation Attack](https://theonionweb.com/2016/10/25/tors-biggest-threat-correlation-attack)
 * [Is Tor Broken? How the NSA Is Working to De-Anonymize You When Browsing the Deep Web](https://null-byte.wonderhowto.com/how-to/is-tor-broken-nsa-is-working-de-anonymize-you-when-browsing-deep-web-0148933)
-* [Use Traffic Analysis to Defeat TOR](https://null-byte.wonderhowto.com/how-to/use-traffic-analysis-defeat-tor-0149100)
+* [Use Traffic Analysis to Defeat Tor](https://null-byte.wonderhowto.com/how-to/use-traffic-analysis-defeat-tor-0149100)
 * ...
 
 Bạn nên cài [NoScript](https://noscript.net) trước khi lướt web với TOR. NoScript sẽ chặn các đoạn mã JavaScript/Java/Flash trên các trang web để đảm bảo chúng sẽ không làm lộ danh tính thật của bạn
 
-# Và làm ơn đừng tải torrent qua TOR
-Nếu bạn muốn giữ ẩn danh khi tải torrent thì dùng VPN nhé
+# Và làm ơn
+* **Đừng spam hay tấn công DoS qua Tor.** Làm vậy không hiệu quả và chỉ làm Tor bị ghét.
+* **Đừng tải torrent qua Tor.** Điều này không hay tẹo nào, tải torrent qua Tor phá vỡ tính ẩn danh và làm tiêu tốn tiền bạc của các tình nguyện viên mạng Tor. Nếu bạn muốn giữ ẩn danh khi tải torrent thì dùng VPN hoặc là proxy nhé nhé.
 
-![Don't torrent through TOR, please](https://github.com/GitHackTools/Store-the-pictures/raw/master/Đừng%20torrent%20qua%20tor%20mà%20-%20Hilda%20meme.png)
+[Bittorrent over Tor isn't a good idea](https://blog.torproject.org/bittorrent-over-tor-isnt-good-idea)
+
+![Don't torrent through Tor, please](https://github.com/GitHackTools/Store-the-pictures/raw/master/Đừng%20torrent%20qua%20tor%20mà%20-%20Hilda%20meme.png)
 
 # Một vài hình ảnh về Torghost
 * Cài đặt ngôn ngữ: `torghostng -l`
@@ -81,7 +84,7 @@ Nếu bạn muốn giữ ẩn danh khi tải torrent thì dùng VPN nhé
 
 * Ngắt kết nối khỏi mạng TOR: `torghostng -x`
 
-![Disconnecting from TOR network with TorghostNG](https://github.com/GitHackTools/Store-the-pictures/raw/master/Torghost%20ng%E1%BA%AFt%20k%E1%BA%BFt%20n%E1%BB%91i%20kh%E1%BB%8Fi%20m%E1%BA%A1ng%20TOR.png)
+![Disconnecting from Tor network with TorghostNG](https://github.com/GitHackTools/Store-the-pictures/raw/master/Torghost%20ng%E1%BA%AFt%20k%E1%BA%BFt%20n%E1%BB%91i%20kh%E1%BB%8Fi%20m%E1%BA%A1ng%20TOR.png)
 
 * Chọn điểm thoát TOR ở quốc gia cụ thể: `torghostng -id COUNTRY ID`
 
