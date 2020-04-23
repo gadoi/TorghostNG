@@ -1,6 +1,6 @@
 # Giới thiệu về TorghostNG
 TorghostNG là một công cụ bạn kết nối Internet ẩn danh qua Tor.
-TorghostNG Được gõ lại từ [TorGhost](https://github.com/SusmithKrishnan/torghost) bằng Python 3.
+TorghostNG Được gõ lại từ [TorGhost](https://github.com/SusmithKrishnan/torghost) với Python 3.
 
 TorghostNG đã được chạy thử trên Kali Linux, Manjaro...
 
