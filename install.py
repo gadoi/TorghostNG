@@ -195,13 +195,14 @@ def install_package(package):
 
 
 def pyinstaller():
-    try:    
+    try:
+        system('sudo pip2 uninstall pyinstaller')
+
         if path.isfile('/usr/bin/pyinstaller') == True:
             print(language.already_installed.format('PyInstaller'))
             
         else:
             print(language.installing.format('PyInstaller'))
-            system('sudo pip2 uninstall pyinstaller')
             system('sudo pip3 install pyinstaller')
             
             print(icon.success + language.done)
