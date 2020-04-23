@@ -1,5 +1,5 @@
 # Giới thiệu về TorghostNG
-TorghostNG là một công cụ bạn kết nối Internet ẩn danh qua TOR.
+TorghostNG là một công cụ bạn kết nối Internet ẩn danh qua Tor.
 TorghostNG Được gõ lại từ [TorGhost](https://github.com/SusmithKrishnan/torghost) bằng Python 3.
 
 TorghostNG đã được chạy thử trên Kali Linux, Manjaro...
@@ -67,7 +67,7 @@ Bạn nên cài [NoScript](https://noscript.net) trước khi lướt web với 
 
 [Bittorrent over Tor isn't a good idea](https://blog.torproject.org/bittorrent-over-tor-isnt-good-idea)
 
-![Don't torrent through Tor, please](https://github.com/GitHackTools/Store-the-pictures/raw/master/Đừng%20torrent%20qua%20tor%20mà%20-%20Hilda%20meme.png)
+![Don't torrent over Tor, please](https://github.com/GitHackTools/Store-the-pictures/raw/master/Đừng%20torrent%20qua%20tor%20mà%20-%20Hilda%20meme.png)
 
 # Một vài hình ảnh về Torghost
 * Cài đặt ngôn ngữ: `torghostng -l`
@@ -82,10 +82,10 @@ Bạn nên cài [NoScript](https://noscript.net) trước khi lướt web với 
 
 ![Changing MAC address with TorghostNG](https://github.com/GitHackTools/Store-the-pictures/raw/master/Thay%20%C4%91%E1%BB%95i%20%C4%91%E1%BB%8Ba%20ch%E1%BB%89%20MAC%20v%E1%BB%9Bi%20TorghostNG.png)
 
-* Ngắt kết nối khỏi mạng TOR: `torghostng -x`
+* Ngắt kết nối khỏi mạng Tor: `torghostng -x`
 
 ![Disconnecting from Tor network with TorghostNG](https://github.com/GitHackTools/Store-the-pictures/raw/master/Torghost%20ng%E1%BA%AFt%20k%E1%BA%BFt%20n%E1%BB%91i%20kh%E1%BB%8Fi%20m%E1%BA%A1ng%20TOR.png)
 
-* Chọn điểm thoát TOR ở quốc gia cụ thể: `torghostng -id COUNTRY ID`
+* Chọn điểm thoát Tor ở quốc gia cụ thể: `torghostng -id COUNTRY ID`
 
-![Connecting to TOR exitnode in a specific country](https://github.com/GitHackTools/Store-the-pictures/raw/master/TorghostNG%20k%E1%BA%BFt%20n%E1%BB%91i%20%C4%91%E1%BA%BFn%20Vi%E1%BB%87t%20Nam.png)
+![Connecting to Tor exitnode in a specific country](https://github.com/GitHackTools/Store-the-pictures/raw/master/TorghostNG%20k%E1%BA%BFt%20n%E1%BB%91i%20%C4%91%E1%BA%BFn%20Vi%E1%BB%87t%20Nam.png)
