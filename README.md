@@ -25,6 +25,9 @@ Bộ cài đặt TorghostNG hiện đang hỗ trợ các bản phân phối Linu
     
 Nhưng với Slackware, bạn phải gõ `sudo python3 torghostng.py` để chạy TorghostNG :v
 
+# Cách cập nhật TorghostNG
+Bạn chỉ cần gõ `torghostng -u` để TorghostNG tự động cập nhật thôi, nhưng nó sẽ tải TorghostNG mới về thư mục `/root` đó, vì bạn phải chạy TorghostNG với quyền root mà. Nếu bạn không muốn vậy thì bạn có thể vô thư mục mà bạn tải TorghostNG về và gõ `git pull -f` và `sudo python3 install.py` thôi.
+
 # Trợ giúp
     TorghostNG 1.0 - Giúp bạn kết nối Internet ẩn danh qua TOR
     Được gõ lại từ TorGhost bằng Python 3
