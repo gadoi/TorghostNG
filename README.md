@@ -89,3 +89,9 @@ Bạn nên cài [NoScript](https://noscript.net) trước khi lướt web với 
 * Chọn điểm thoát Tor ở quốc gia cụ thể: `torghostng -id COUNTRY ID`
 
 ![Connecting to Tor exitnode in a specific country](https://github.com/GitHackTools/Store-the-pictures/raw/master/TorghostNG%20k%E1%BA%BFt%20n%E1%BB%91i%20%C4%91%E1%BA%BFn%20Vi%E1%BB%87t%20Nam.png)
+
+# To-do lists
+* Chặn bỏ xừ torrent, vì mạng Tor
+* Hỗ trợ IPv6 (có được không?)
+* Có giao diện người dùng cuối
+* Sửa lỗi, cải thiện TorghostNG (luôn luôn rồi)
