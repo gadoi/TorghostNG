@@ -78,7 +78,8 @@ Bạn nên cài [NoScript](https://noscript.net) trước khi lướt web với 
 
 # Nhật ký thay đổi
 Phiên bản 1.1
-* Có kiểm tra 
+* Có kiểm tra IPv6
+* Thay "TOR" bằng "Tor"
 * Chặn kết nối BitTorrent
 * Tự động vô hiệu hóa IPv6 trước khi kết nối đến Tor
 
