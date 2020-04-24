@@ -4,6 +4,10 @@ TorghostNG Được gõ lại từ [TorGhost](https://github.com/SusmithKrishnan
 
 TorghostNG đã được chạy thử trên Kali Linux, Manjaro...
 
+# Trước khi bạn dùng TorghostNG
+* Vì mạng Tor, iptables sẽ chặn các kết nối BitTorrent. Mặc dù bạn có thể "vượt rào" với phần cài đặt trong phần mềm torrent 😥 Rất khó để chặn hoàn toàn torrent.
+* Vì lý do bảo mật, TorghostNG sẽ vô hiệu hóa IPv6 để ngăn ngừa IPv6 rò rỉ (mình bị dính chưởng rồi nè lmao).
+
 # Cài đặt TorghostNG
 Bộ cài đặt TorghostNG hiện đang hỗ trợ các bản phân phối Linux:
 * Dựa trên Arch Linux
@@ -72,7 +76,12 @@ Bạn nên cài [NoScript](https://noscript.net) trước khi lướt web với 
 
 ![Don't torrent over Tor, please](https://github.com/GitHackTools/Store-the-pictures/raw/master/Đừng%20torrent%20qua%20tor%20mà%20-%20Hilda%20meme.png)
 
-# Một vài hình ảnh về Torghost
+# Nhật ký thay đổi
+Phiên bản 1.1
+* Chặn kết nối BitTorrent
+* Tự động vô hiệu hóa IPv6 trước khi kết nối đến Tor
+
+# Một vài hình ảnh về Torghost (bản 1.0)
 * Cài đặt ngôn ngữ: `torghostng -l`
 
 ![Setting language on TorghostNG](https://github.com/GitHackTools/Store-the-pictures/raw/master/Cài%20đặt%20ngôn%20ngữ%20cho%20TorghostNG.png)
