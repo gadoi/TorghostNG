@@ -39,21 +39,19 @@ Nhưng với Slackware, bạn phải gõ `sudo python3 torghostng.py` để ch�
 Bạn chỉ cần gõ `torghostng -u` để TorghostNG tự động cập nhật thôi, nhưng nó sẽ tải TorghostNG mới về thư mục `/root` đó, vì bạn phải chạy TorghostNG với quyền root mà. Nếu bạn không muốn vậy thì bạn có thể vô thư mục mà bạn tải TorghostNG về và gõ `git pull -f` và `sudo python3 install.py` thôi.
 
 # Trợ giúp
-    TorghostNG 1.0 - Giúp bạn kết nối Internet ẩn danh qua TOR
-    Được gõ lại từ TorGhost bằng Python 3
-    usage: torghostng [-h] -s|-x|-id|-m|-c|-l|--list
     CÁC LỰA CHỌN:
-    -h, --help       Hiển thị phần trợ giúp và thoát
-    -s, --start      Bắt đầu kết nối đến mạng TOR
-    -x, --stop       Ngưng kết nối đến mạng TOR
-    -id ID QUỐC GIA  Thay đổi địa chỉ IP sang một quốc gia cụ thể. Vô CountryCode.org để xem ID
-    -mac INTERFACE   Thay đổi ngẫu nhiên địa chỉ MAC. Dùng lệnh 'ifconfig' để xem các interface
-    -c, --checkip    Xem địa chỉ IP hiện tại
-    --nodelay        Tắt hiệu ứng thời gian đi
-    -l, --language   Thay đổi ngôn ngữ hiển thị. Tiếng Anh là mặc định
-    --list           Hiển thị danh sách các ngôn ngữ hiện có
-    -u, --update     Kiểm tra cập nhật
-    --dns            Dùng cái này để sửa vấn đề về DNS`
+      -h, --help       Hiển thị phần trợ giúp và thoát
+      -s, --start      Bắt đầu kết nối đến mạng Tor
+      -x, --stop       Ngưng kết nối đến mạng Tor
+      -r, --renew      Thay đổi mạch Tor
+      -id ID QUỐC GIA  Thay đổi địa chỉ IPv4 sang một quốc gia cụ thể. Vô CountryCode.org để xem ID
+      -mac INTERFACE   Thay đổi ngẫu nhiên địa chỉ MAC. Dùng lệnh 'ifconfig' để xem các interface
+      -c, --checkip    Xem địa chỉ IP hiện tại
+      --dns            Dùng cái này để sửa vấn đề về DNS
+      -l, --language   Thay đổi ngôn ngữ hiển thị. Tiếng Anh là mặc định
+      --list           Hiển thị danh sách các ngôn ngữ hiện có
+      -u, --update     Kiểm tra cập nhật
+      --nodelay        Tắt hiệu ứng thời gian đi`
 
 Bạn cũng có thể dùng nhiều lựa chọn cùng lúc như:
 * `torghostng -s -m INTERFACE`: đổi địa chỉ MAC trước khi kết nối
