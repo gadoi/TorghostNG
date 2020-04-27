@@ -20,8 +20,6 @@ Bộ cài đặt TorghostNG hiện đang hỗ trợ các bản phân phối Linu
 * Dựa trên Debian/Ubuntu
 * Dựa trên Fedora, CentOS, RHEL, openSUSE
 * [Solus OS](https://getsol.us)
-* [Alpine Linux](https://alpinelinux.org)
-* [OpenWrt Linux](https://openwrt.org)
 * [Void Linux](https://voidlinux.org)
 * Và bậc lão thành trong làng Linux: [Slackware](http://slackware.com)
 * (Sao mà lắm trình quản lý gói thế :v)
