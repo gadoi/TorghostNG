@@ -164,6 +164,9 @@ def install_package(package):
                     
                     if path.isfile('/usr/bin/pacman') == True:
                         package = 'python-pip'
+                        
+                    elif path.isfile('/usr/bin/eopkg') == True:
+                        package = 'python3'
 
                 system(INSTALL_PACKAGES + package)
 
