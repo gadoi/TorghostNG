@@ -1,14 +1,13 @@
 # Giới thiệu về TorghostNG
+![TorghostNG now supports Privoxy](https://github.com/GitHackTools/Store-the-pictures/blob/master/TorghostNG%20%20Privoxy.png)
+
 TorghostNG là một công cụ bạn kết nối Internet ẩn danh qua Tor.
 TorghostNG Được gõ lại từ [TorGhost](https://github.com/SusmithKrishnan/torghost) với Python 3.
 
 TorghostNG đã được chạy thử trên Kali Linux, Manjaro...
 
-# Có gì mới ở TorghostNG 1.2
-* Sửa lỗi `update_commands` và vài thứ trong [torghostng.py](https://github.com/gitkern3l/TorghostNG/blob/master/torghostng.py)
-* Thay đổi vài thứ trong [`theme.py`](https://github.com/gitkern3l/TorghostNG/blob/master/torngconf/theme.py)
-* Thay đổi vài thứ trong [`install.py`](https://github.com/gitkern3l/TorghostNG/blob/master/install.py)
-* Hỗ trợ đổi mạch Tor với `-r`
+# Có gì mới ở TorghostNG 1.5
+* Bản 1.5 lỗi quá nên có bản 1.5 để sửa lỗi thôi :smile:
 
 # Trước khi bạn dùng TorghostNG
 * Vì mạng Tor, iptables sẽ chặn các kết nối BitTorrent. Mặc dù bạn có thể "vượt rào" với phần cài đặt trong phần mềm torrent 😥 Rất khó để chặn hoàn toàn torrent.
@@ -79,6 +78,15 @@ Bạn nên cài [NoScript](https://noscript.net) trước khi lướt web với 
 ![Don't torrent over Tor, please](https://github.com/GitHackTools/Store-the-pictures/raw/master/Đừng%20torrent%20qua%20tor%20mà%20-%20Hilda%20meme.png)
 
 # Nhật ký thay đổi
+Phiên bản 1.5
+* Sửa lỗi của phiên bản 1.4
+
+Phiên bản 1.4
+* Hỗ trợ kết nối mạng Tor với Privoxy
+
+Phiên bản 1.3
+* Sửa lỗi
+
 Phiên bản 1.2
 * Sửa lỗi `update_commands` và vài thứ trong [torghostng.py](https://github.com/gitkern3l/TorghostNG/blob/master/torghostng.py)
 * Thay đổi vài thứ trong [`theme.py`](https://github.com/gitkern3l/TorghostNG/blob/master/torngconf/theme.py)
