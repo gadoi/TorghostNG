@@ -14,7 +14,7 @@ except ModuleNotFoundError:
     exit()
 
 SLEEP_TIME = 1.0
-VERSION = "1.4"
+VERSION = "1.5"
 
 def the_argparse(language=English):
         parser = argparse.ArgumentParser(usage="torghostng [-h] -s|-x|-id|-r|-m|-c|-l|--list")
@@ -47,10 +47,8 @@ else:
 
 if path.isfile('/usr/bin/apt') == True:
     TOR_USER = 'debian-tor'
-    NETSTAT = 'netstat'
 else:
     TOR_USER = 'tor'
-    NETSTAT = 'netstat-nat'
 
 Torrc = '/etc/tor/torngrc'
 resolv = '/etc/resolv.conf'
@@ -256,7 +254,7 @@ def check_tor(status):
                 print(language.tor_disconnected)
             
         else:
-            if 'LISTEN' in getoutput('{} -n | grep privoxy'.format(NETSTAT)):
+            if 'LISTEN' in getoutput('netstat -atnp | grep privoxy'):
                 print(language.tor_success.format('Privoxy'))
                 
             else:
@@ -408,7 +406,7 @@ def stop_connecting():
         print(icon.process + ' ' + language.stop_help)
         
         # Restore Privoxy configuration
-        if 'LISTEN' in getoutput('{} -n | grep privoxy'.format(NETSTAT)):
+        if 'LISTEN' in getoutput('netstat -atnp | grep privoxy'):
             print(language.restoring_configuration.format('Privoxy'), end='', flush=True)
             
             if path.isfile(Privoxy + '.backup')  == True:
